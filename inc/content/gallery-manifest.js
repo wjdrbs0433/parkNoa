@@ -1,0 +1,40 @@
+/**
+ * 갤러리 그리드 이미지 — 파일명만 추가하면 됩니다. (정렬은 자동)
+ * 형식: gallery숫자_월약어_연도.png  예: gallery02_May_2025.png
+ */
+
+window.GALLERY_GRID_FILES = [
+    "gallery01_Aug_2022.png",
+    "gallery01_Aug_2023.png",
+    "gallery01_Dec_2025.png",
+    "gallery01_Feb_2022.png",
+    "gallery01_Feb_2023.png",
+    "gallery01_Feb_2024.png",
+    "gallery01_Feb_2025.png",
+    "gallery01_Jan_2022.png",
+    "gallery01_Jul_2022.png",
+    "gallery01_Jun_2024.png",
+    "gallery01_May_2022.png",
+    "gallery01_May_2023.png",
+    "gallery01_May_2024.png",
+    "gallery01_May_2025.png",
+    "gallery01_Oct_2021.png",
+    "gallery02_Feb_2022.png",
+    "gallery02_Feb_2025.png",
+    "gallery02_May_2022.png",
+    "gallery03_Feb_2025.png",
+    "gallery03_May_2022.png",
+    "gallery04_Feb_2025.png",
+    "gallery05_Feb_2025.png",
+    "gallery06_Feb_2025.png",
+    // "gallery07_Feb_2025.png",
+    // "gallery08_Feb_2025.png",
+    "gallery09_Feb_2025.png",
+    "gallery10_Feb_2025.png",
+    "gallery11_Feb_2025.png",
+    // "gallery12_Feb_2025.png",
+    // "gallery13_Feb_2025.png",
+    "gallery14_Feb_2025.png",
+    "gallery15_Feb_2025.png",
+    "gallery16_Feb_2025.png",
+];

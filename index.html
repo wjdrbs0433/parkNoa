@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Noa Park Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS / JS -->
+    <link rel="stylesheet" href="inc/css/bootstrap.min.css">
+    <script src="inc/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="inc/css/page.css">
+    <link rel="stylesheet" href="inc/css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <script src="inc/js/common.js"></script>
+</head>
+
+
+<body class="page-home">
+    <div id="navbar-placeholder"></div>
+
+    <main class="home-main">
+        <section class="hero-section" aria-labelledby="hero-heading">
+            <div class="hero-layout">
+                <div class="hero-photo-wrap">
+                    <img src="img/mainImage.png" alt="Portrait of Noa Park" class="hero-photo" width="320" height="400">
+                </div>
+
+                <div class="hero-copy">
+                    <p class="hero-eyebrow">Animal Science · UIUC</p>
+                    <h1 id="hero-heading" class="hero-title">Welcome to <span>Noa&rsquo;s Arkive</span></h1>
+                    <p class="hero-subtitle">
+                        I am Noa Park, a Ph.D. student in Animal Science at the University of Illinois Urbana-Champaign.
+                    </p>
+
+                    <div class="hero-keywords">
+                        <span class="keyword-chip">Precision Nutrition</span>
+                        <span class="keyword-chip">Swine Nutrition Research</span>
+                        <span class="keyword-chip">Digestibility Studies</span>
+                        <span class="keyword-chip">Growth Performance</span>
+                        <span class="keyword-chip">Meta-Analysis</span>
+                        <span class="keyword-chip">Sustainable Livestock</span>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a href="#" class="btn-hero primary" data-bs-toggle="modal" data-bs-target="#cvModal">
+                            <i class="bi bi-file-earmark-person me-2"></i>View My CV
+                        </a>
+                        <a href="about.html" class="btn-hero secondary">
+                            <i class="bi bi-arrow-right-circle me-2"></i>About me
+                        </a>
+                    </div>
+
+                    <div class="hero-quicklinks" role="group" aria-label="Publications and CV download">
+                        <a href="publication.html" class="hero-quicklink">
+                            <span class="hero-quicklink-icon" aria-hidden="true">
+                                <i class="bi bi-journal-text"></i>
+                            </span>
+                            <span class="hero-quicklink-main">
+                                <span class="hero-quicklink-title">Journal publications</span>
+                                <span class="hero-quicklink-desc">Browse papers and article list</span>
+                            </span>
+                            <span class="hero-quicklink-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+                        </a>
+                        <div class="hero-quicklink hero-quicklink--cv hero-quicklink--pending" aria-disabled="true" title="추후 PDF 파일을 연결할 예정입니다">
+                            <span class="hero-quicklink-icon hero-quicklink-icon--cv" aria-hidden="true">
+                                <i class="bi bi-file-earmark-arrow-down"></i>
+                            </span>
+                            <span class="hero-quicklink-main">
+                                <span class="hero-quicklink-title">Download CV</span>
+                                <span class="hero-quicklink-desc">파일 연결 예정</span>
+                            </span>
+                            <span class="hero-quicklink-badge">준비중</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-explore" aria-labelledby="explore-heading">
+            <div class="home-explore-inner">
+                <header class="home-explore-head">
+                    <p class="home-explore-kicker">Portfolio</p>
+                    <h2 id="explore-heading" class="home-explore-title">Explore this site</h2>
+                    <p class="home-explore-desc">Publications, abstracts, gallery, and bio — quick links below.</p>
+                </header>
+
+                <div class="poster-grid">
+                    <div class="row g-4">
+                        <div class="col-lg-3 col-md-6">
+                            <a href="publication.html" class="poster-card" aria-label="Journal Publications — peer-reviewed papers">
+                                <div class="poster-image-wrap">
+                                    <img src="img/poster01.png" alt="" class="poster-image" draggable="false">
+                                </div>
+                                <div class="poster-content">
+                                    <h3 class="poster-title">Journal Publications</h3>
+                                    <p class="poster-meta">Peer-reviewed work</p>
+                                </div>
+                                <div class="poster-overlay" aria-hidden="true">
+                                    <div class="poster-arrow">
+                                        <i class="bi bi-arrow-right"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <a href="Abstract.html" class="poster-card" aria-label="Conference abstracts and posters">
+                                <div class="poster-image-wrap">
+                                    <img src="img/poster01.png" alt="" class="poster-image" draggable="false">
+                                </div>
+                                <div class="poster-content">
+                                    <h3 class="poster-title">Conference Abstracts</h3>
+                                    <p class="poster-meta">Meetings &amp; posters</p>
+                                </div>
+                                <div class="poster-overlay" aria-hidden="true">
+                                    <div class="poster-arrow">
+                                        <i class="bi bi-arrow-right"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <a href="gallery.html" class="poster-card" aria-label="Research gallery — photos and highlights">
+                                <div class="poster-image-wrap">
+                                    <img src="img/poster01.png" alt="" class="poster-image" draggable="false">
+                                </div>
+                                <div class="poster-content">
+                                    <h3 class="poster-title">Research Gallery</h3>
+                                    <p class="poster-meta">Photos &amp; highlights</p>
+                                </div>
+                                <div class="poster-overlay" aria-hidden="true">
+                                    <div class="poster-arrow">
+                                        <i class="bi bi-arrow-right"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <a href="about.html" class="poster-card" aria-label="Full biography and background">
+                                <div class="poster-image-wrap">
+                                    <img src="img/poster01.png" alt="" class="poster-image" draggable="false">
+                                </div>
+                                <div class="poster-content">
+                                    <h3 class="poster-title">Full Biography</h3>
+                                    <p class="poster-meta">Background &amp; path</p>
+                                </div>
+                                <div class="poster-overlay" aria-hidden="true">
+                                    <div class="poster-arrow">
+                                        <i class="bi bi-arrow-right"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+</body>
+</html>
+
+
+
+<!-- 모달창 -->
+<div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="cvModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content cv-modal">
+            <div class="modal-header border-0 pb-0">
+                <h2 class="modal-title fw-bold" id="cvModalLabel">
+                    <i class="bi bi-file-earmark-person me-2 text-primary"></i>Resume & CV
+                </h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            <div class="modal-body p-4">
+                <!-- 2열 그리드 CV -->
+                <div class="row g-4">
+                    <!-- 왼쪽: Education -->
+                    <div class="col-lg-6">
+                        <div class="cv-section">
+                            <h5 class="cv-section-title">
+                                <i class="bi bi-mortarboard me-2"></i>Education
+                            </h5>
+                            <div class="cv-item">
+                                <span class="cv-date">Sep 2026<br>-Present</span>
+                                <div class="cv-detail">
+                                    <strong>Ph.D. in Animal Science</strong><br>
+                                    University of Illinois Urbana-Champaign, IL, USA
+                                    <img src="img/llinoisLogo.png" alt="llinois" class="cv-univ-logo">
+                                </div>
+                            </div>
+                            <div class="cv-item">
+                                <span class="cv-date">Feb 2025</span>
+                                <div class="cv-detail">
+                                    <strong>M.S. in Animal Science</strong><br>
+                                    Konkuk University, Seoul, South Korea
+                                    <img src="img/KONKUK.png" alt="Konkuk" class="cv-univ-logo">
+                                </div>
+                            </div>
+                            <div class="cv-item">
+                                <span class="cv-date">Aug 2023</span>
+                                <div class="cv-detail">
+                                    <strong>B.S. in Animal Science</strong><br>
+                                    Konkuk University, Seoul, South Korea
+                                    <img src="img/KONKUK.png" alt="Konkuk" class="cv-univ-logo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 오른쪽: Skills & Research -->
+                    <div class="col-lg-6">
+                        <div class="cv-section">
+                            <h5 class="cv-section-title">
+                                <i class="bi bi-lightbulb me-2"></i>Research Interest
+                            </h5>
+                            <ul class="cv-list">
+                                <li>Precision nutrition in monogastric animals</li>
+                                <li>Nutrient digestibility and energy utilization in pigs</li>
+                                <li>Nutritional strategies to enhance digestibility and growth performance</li>
+                                <li>Meta-analysis in monogastric animal nutrition</li>
+                                <li>Modeling approaches for precision feeding</li>
+                            </ul>
+                        </div>
+
+                        <div class="cv-section mt-4">
+                            <h5 class="cv-section-title">
+                                <i class="bi bi-graph-up me-2"></i>Publications
+                            </h5>
+                            <div class="cv-stats">
+                                <span class="stat-item">10+ Journal Articles(수정필)</span>
+                                <span class="stat-item">15 Conference Posters(수정필)</span>
+                                <span class="stat-item">5 Oral Presentations(수정필)</span>
+                            </div>
+                        </div>
+
+                        <!-- 다운로드 버튼 -->
+                        <!-- <div class="cv-download mt-4 text-center">
+                            <a href="cv/Noa_Park_CV.pdf" class="btn-download" download>
+                                <i class="bi bi-download me-2"></i>Download Full CV (PDF)
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
