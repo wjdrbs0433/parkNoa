@@ -22,11 +22,11 @@ window.ABOUT_CONTENT = {
     /** 상단 이름·소속 한 줄들 */
     hero: {
         name: "Noa Park, Ph.D. Student",
-        position: "Ph.D. Student, University of Illinois Urbana-Champaign",
-        metaDepartment: "Department of Animal Science · ",
-        metaPriorSchool: "Konkuk University (B.S., M.S.)",
+        position: "Ph.D. Student, Animal Science, University of Illinois Urbana-Champaign",
+        metaDepartment: "",
+        metaPriorSchool: "",
         highlight:
-            "My research focuses on sustainable animal production through precision nutritional strategies.",
+            "My research focuses on sustainable animal production through precision nutrition.",
     },
 
     /** Biography 블록 */
@@ -81,17 +81,6 @@ window.ABOUT_CONTENT = {
                     logoSrc: "img/KONKUK.png",
                     logoAlt: "Konkuk University",
                 },
-            ],
-        },
-
-        /**
-         * 연구 경험 — 문자열 하나당 불릿 한 줄.
-         * 배열이 비어 있으면([]) 카드는 보이고 안쪽은 공백 한 칸만 들어갑니다.
-         */
-        researchExperience: {
-            title: "Research experience",
-            items: [
-                "",
             ],
         },
 

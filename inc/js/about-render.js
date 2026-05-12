@@ -28,46 +28,28 @@
     
     function renderEducation(container, data) {
         if (!container || !data) return;
-        var html = "";
+        var html = '<div class="cv-education-layout">';
         data.items.forEach(function (row) {
-            html += '<div class="cv-item-grid">';
+            html += '<div class="cv-item-grid cv-item-grid--education-cell">';
+            html += '<div class="cv-edu-date-col">';
             html += '<span class="cv-date">' + esc(row.period) + "</span>";
-            html += "<div>";
-            html += '<div class="cv-text fw-semibold">' + esc(row.degree) + "</div>";
-            html += '<div class="cv-text">' + esc(row.schoolLine);
             if (row.logoSrc) {
                 html +=
-                    ' <img src="' +
+                    '<img src="' +
                     esc(row.logoSrc) +
                     '" alt="' +
                     esc(row.logoAlt || "") +
-                    '" class="cv-univ-logo" loading="lazy">';
+                    '" class="cv-univ-logo cv-univ-logo--under-date" loading="lazy">';
             }
-            html += "</div></div></div>";
+            html += "</div>";
+            html += "<div>";
+            html += '<div class="cv-text fw-semibold">' + esc(row.degree) + "</div>";
+            html += '<div class="cv-text">' + esc(row.schoolLine) + "</div>";
+            html += "</div></div>";
         });
+        html += "</div>";
         container.innerHTML = html;
         var titleEl = document.getElementById("cv-education-title");
-        if (titleEl) titleEl.textContent = data.title || "";
-    }
-
-    function renderResearchExperience(colEl, bodyEl, data) {
-        if (!colEl || !bodyEl || !data) return;
-        colEl.style.display = "";
-        var items = data.items || [];
-        var html = "";
-        if (items.length === 0) {
-            html =
-                '<div class="cv-item"><div class="cv-dot"></div><div class="cv-text">&nbsp;</div></div>';
-        } else {
-            items.forEach(function (text) {
-                html +=
-                    '<div class="cv-item"><div class="cv-dot"></div><div class="cv-text">' +
-                    esc(text) +
-                    "</div></div>";
-            });
-        }
-        bodyEl.innerHTML = html;
-        var titleEl = document.getElementById("cv-research-exp-title");
         if (titleEl) titleEl.textContent = data.title || "";
     }
 
@@ -131,8 +113,14 @@
             var elHi = document.getElementById("about-highlight");
             if (elName) elName.textContent = C.hero.name || "";
             if (elPos) elPos.textContent = C.hero.position || "";
-            if (elDept) elDept.textContent = C.hero.metaDepartment || "";
-            if (elPrior) elPrior.textContent = C.hero.metaPriorSchool || "";
+            var md = (C.hero.metaDepartment != null ? C.hero.metaDepartment : "").trim();
+            var mp = (C.hero.metaPriorSchool != null ? C.hero.metaPriorSchool : "").trim();
+            if (elDept) elDept.textContent = md;
+            if (elPrior) elPrior.textContent = mp;
+            var elMeta = document.querySelector(".about-meta");
+            if (elMeta) {
+                elMeta.classList.toggle("d-none", !md && !mp);
+            }
             if (elHi) elHi.textContent = C.hero.highlight || "";
         }
 
@@ -157,15 +145,10 @@
         }
 
         if (C.cv) {
+            renderEducation(document.getElementById("cv-education-body"), C.cv.education);
             renderResearchInterests(
                 document.getElementById("cv-research-list"),
                 C.cv.researchInterests
-            );
-            renderEducation(document.getElementById("cv-education-body"), C.cv.education);
-            renderResearchExperience(
-                document.getElementById("cv-col-research-exp"),
-                document.getElementById("cv-research-exp-body"),
-                C.cv.researchExperience
             );
             renderPeerReview(document.getElementById("cv-peer-body"), C.cv.peerReview);
             renderLeadership(document.getElementById("cv-leadership-body"), C.cv.leadership);

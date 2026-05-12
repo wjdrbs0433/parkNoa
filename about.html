@@ -59,43 +59,35 @@
 </div>
 
 
-    <!-- CV 2열 그리드 섹션 -->
+    <!-- CV 그리드: Education 전체 너비 → Research / Peer 2열 → Leadership -->
     <section class="cv-grid">
         <div class="row g-4">
-            <!-- Research Interests — 목록은 inc/content/about-content.js -->
-            <div class="col-lg-6 col-md-12">
-                <div class="cv-card">
-                    <h5 id="cv-research-title"></h5>
-                    <div id="cv-research-list"></div>
-                </div>
-            </div>
-
-            <!-- Education — inc/content/about-content.js -->
-            <div class="col-lg-6 col-md-12">
-                <div class="cv-card">
+            <!-- Education — 전체 너비, inc/content/about-content.js -->
+            <div class="col-12">
+                <div class="cv-card cv-card--education-wide">
                     <h5 id="cv-education-title"></h5>
                     <div id="cv-education-body"></div>
                 </div>
             </div>
 
-            <!-- Research experience — 내용 없으면 빈 줄(&nbsp;) 한 줄만 표시 -->
-            <div class="col-lg-6 col-md-12" id="cv-col-research-exp">
-                <div class="cv-card">
-                    <h5 id="cv-research-exp-title"></h5>
-                    <div id="cv-research-exp-body"></div>
+            <!-- Research Interests — inc/content/about-content.js -->
+            <div class="col-lg-6 col-md-12">
+                <div class="cv-card cv-card--half">
+                    <h5 id="cv-research-title"></h5>
+                    <div id="cv-research-list"></div>
                 </div>
             </div>
 
             <!-- Peer Reviewer — inc/content/about-content.js -->
             <div class="col-lg-6 col-md-12">
-                <div class="cv-card">
+                <div class="cv-card cv-card--half">
                     <h5 id="cv-peer-title"></h5>
                     <div id="cv-peer-body"></div>
                 </div>
             </div>
 
             <!-- Leadership — inc/content/about-content.js -->
-            <div class="col-lg-12 col-md-12">
+            <div class="col-12">
                 <div class="cv-card">
                     <h5 id="cv-leadership-title"></h5>
                     <div id="cv-leadership-body"></div>

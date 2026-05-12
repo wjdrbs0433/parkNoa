@@ -1,23 +1,87 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Noa Park Page</title>
+    <title>Noa Park — Contact</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS / JS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="inc/css/bootstrap.min.css">
     <script src="inc/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="inc/css/page.css">
-    <link rel="stylesheet" href="inc/css/index.css">
+    <link rel="stylesheet" href="inc/css/contact.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <script src="inc/js/common.js"></script>
 </head>
 
-
-<body>
+<body class="page-contact">
     <div id="navbar-placeholder"></div>
+
+    <main class="contact-page">
+        <header class="contact-page-head">
+            <p class="contact-page-kicker">Get in touch</p>
+            <h1 class="contact-page-title">Contact</h1>
+        </header>
+
+        <div class="contact-panels row g-4 align-items-stretch">
+            <div class="col-lg-6">
+                <div class="contact-map-wrap">
+                    <!-- University of Illinois Urbana-Champaign, IL (campus area ~40.102°N, 88.227°W) -->
+                    <iframe
+                        title="Map: University of Illinois Urbana-Champaign, Illinois"
+                        src="https://www.google.com/maps?q=40.1020,-88.2272&amp;hl=en&amp;z=14&amp;output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <dl class="contact-details contact-details-panel">
+                    <dt>Name</dt>
+                    <dd>Noa Park</dd>
+
+                    <dt>Institution</dt>
+                    <dd>University of Illinois Urbana-Champaign</dd>
+
+                    <dt>Position</dt>
+                    <dd>Ph.D. Student</dd>
+
+                    <dt>Major</dt>
+                    <dd>Swine Nutrition</dd>
+
+                    <dt>Address</dt>
+                    <dd>
+                        Department of Animal Sciences<br>
+                        University of Illinois Urbana-Champaign<br>
+                        1207 W Gregory Dr, Urbana, IL 61801, USA
+                    </dd>
+
+                    <dt>Email</dt>
+                    <dd><a href="mailto:noapark2@illinois.edu">noapark2@illinois.edu</a></dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="contact-bottom">
+            <div class="contact-bottom-social" aria-label="Social and academic profiles">
+                <a href="https://www.linkedin.com/in/noa-park-84a5002b4/" class="contact-social-btn contact-social-btn--in" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="https://www.researchgate.net/profile/Noa-Park-2?ev=hdr_xprf" class="contact-social-btn contact-social-btn--rg" target="_blank" rel="noopener noreferrer" aria-label="ResearchGate">RG</a>
+                <a href="https://scholar.google.com/citations?user=YwQN3AwAAAAJ&amp;hl=en" class="contact-social-btn contact-social-btn--scholar" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+                    <i class="bi bi-mortarboard"></i>
+                </a>
+            </div>
+            <p class="contact-bottom-contact mb-0">
+                <span>Contact</span>
+                <a href="mailto:parknoa0227@gmail.com">parknoa0227@gmail.com</a>
+            </p>
+        </div>
+    </main>
 
     <div id="footer-placeholder"></div>
 </body>

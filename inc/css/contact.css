@@ -1,0 +1,241 @@
+/* Contact page — aligned with site (blue accent, soft background), sticky footer */
+
+.page-contact {
+    --ct-text: #0f172a;
+    --ct-muted: #64748b;
+    --ct-border: rgba(15, 23, 42, 0.08);
+    --ct-accent: #2563eb;
+    --ct-accent-soft: #3b82f6;
+    --ct-surface: #ffffff;
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    color: var(--ct-text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f6fb;
+    background-image:
+        radial-gradient(ellipse 120% 80% at 100% -20%, rgba(37, 99, 235, 0.07), transparent 50%),
+        radial-gradient(ellipse 80% 55% at 0% 100%, rgba(30, 58, 95, 0.05), transparent 45%);
+    background-attachment: fixed;
+}
+
+/* 공통 푸터를 뷰포트 하단에 붙임 (짧은 페이지에서 중간에 떠 보이지 않도록) */
+.page-contact #footer-placeholder {
+    margin-top: auto;
+    width: 100%;
+}
+
+.page-contact .footer {
+    margin-top: 0;
+    background: var(--ct-surface);
+    border-top: 1px solid var(--ct-border);
+}
+
+.contact-page {
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 2.5rem;
+}
+
+/* 제목 — Publication 스타일에 가깝게 (빨강 제거, 키커 + 다크 타이틀) */
+.contact-page-head {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--ct-border);
+}
+
+.contact-page-kicker {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--ct-accent-soft);
+    margin-bottom: 0.45rem;
+}
+
+.contact-page-title {
+    margin: 0;
+    font-size: clamp(2rem, 4.5vw, 2.55rem);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    color: var(--ct-text);
+    line-height: 1.15;
+}
+
+/* 지도 + 연락처 — 카드형 패널 */
+.contact-panels {
+    background: var(--ct-surface);
+    border-radius: 20px;
+    border: 1px solid var(--ct-border);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.9) inset,
+        0 12px 40px rgba(15, 23, 42, 0.06);
+    padding: 1.35rem 1.25rem 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 992px) {
+    .contact-panels {
+        padding: 1.6rem 1.75rem 1.75rem;
+    }
+}
+
+.contact-map-wrap {
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.06);
+    background: #e8edf5;
+    aspect-ratio: 4 / 3;
+    min-height: clamp(220px, 42vw, 380px);
+}
+
+.contact-map-wrap iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 240px;
+    border: 0;
+}
+
+.contact-details {
+    margin: 0;
+    padding: 0.15rem 0 0;
+}
+
+.contact-details-panel {
+    padding: 0.25rem 0.15rem 0.35rem;
+}
+
+@media (min-width: 992px) {
+    .contact-details-panel {
+        padding: 0.35rem 0.35rem 0.35rem 0.5rem;
+    }
+}
+
+.contact-details dt {
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.11em;
+    color: var(--ct-muted);
+    margin-top: 0.95rem;
+    margin-bottom: 0.2rem;
+}
+
+.contact-details dt:first-child {
+    margin-top: 0;
+}
+
+.contact-details dd {
+    margin: 0;
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: var(--ct-text);
+    line-height: 1.5;
+}
+
+.contact-details a {
+    color: var(--ct-accent);
+    text-decoration: none;
+    word-break: break-word;
+    font-weight: 700;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+    color: #1d4ed8;
+}
+
+/* 하단 소셜 + 보조 이메일 */
+.contact-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem 1.25rem;
+    padding: 1.1rem 1.35rem;
+    background: var(--ct-surface);
+    border-radius: 16px;
+    border: 1px solid var(--ct-border);
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+}
+
+.contact-bottom-social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+.contact-social-btn {
+    width: 2.55rem;
+    height: 2.55rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 1.12rem;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+}
+
+.contact-social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+}
+
+.contact-social-btn--in {
+    background: #0a66c2;
+    color: #fff;
+}
+
+.contact-social-btn--rg {
+    background: #fff;
+    color: #1e293b;
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    font-size: 0.62rem;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+}
+
+.contact-social-btn--scholar {
+    background: #4285f4;
+    color: #fff;
+}
+
+.contact-bottom-contact {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--ct-muted);
+}
+
+.contact-bottom-contact span {
+    font-weight: 700;
+    color: var(--ct-text);
+    margin-right: 0.4rem;
+}
+
+.contact-bottom-contact a {
+    color: var(--ct-accent);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.contact-bottom-contact a:hover {
+    text-decoration: underline;
+    color: #1d4ed8;
+}
+
+@media (max-width: 575.98px) {
+    .contact-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

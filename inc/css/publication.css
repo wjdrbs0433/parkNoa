@@ -40,9 +40,10 @@
 
 .pub-page-kicker {
     font-size: 0.75rem;
-    font-weight: 800;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 0.06em;
+    text-transform: none;
     color: var(--pub-accent-soft);
     margin-bottom: 0.5rem;
 }
@@ -57,10 +58,11 @@
 }
 
 .pub-page-title span {
-    background: linear-gradient(105deg, var(--pub-accent) 0%, var(--pub-accent-soft) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--pub-accent-soft);
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    -webkit-text-fill-color: unset;
 }
 
 .pub-page-desc {
@@ -129,10 +131,35 @@
     font-weight: 500;
 }
 
-.pub-item-text strong {
-    font-weight: 800;
+/* 저널명: 이탤릭 + 링크 (구 strong 파란색 역할) */
+.pub-journal-link {
+    font-style: italic;
+    font-weight: 700;
     color: var(--pub-accent-soft);
-    letter-spacing: 0.02em;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    border-bottom: 1px solid transparent;
+    transition:
+        color 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.pub-journal-link:hover {
+    color: #1d4ed8;
+    border-bottom-color: rgba(37, 99, 235, 0.45);
+}
+
+.pub-journal-plain {
+    font-style: italic;
+    font-weight: 700;
+    color: var(--pub-accent-soft);
+    letter-spacing: 0.01em;
+}
+
+/* Abstracts: venue / proceedings line on its own row */
+.pub-item-text cite.pub-journal-plain {
+    display: block;
+    margin-top: 0.4rem;
 }
 
 @media (max-width: 575.98px) {

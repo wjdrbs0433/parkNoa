@@ -39,11 +39,12 @@
 
                     <div class="hero-keywords">
                         <span class="keyword-chip">Precision Nutrition</span>
-                        <span class="keyword-chip">Swine Nutrition Research</span>
-                        <span class="keyword-chip">Digestibility Studies</span>
+                        <span class="keyword-chip">Animal Nutrition</span>
+                        <span class="keyword-chip">Digestibility</span>
                         <span class="keyword-chip">Growth Performance</span>
                         <span class="keyword-chip">Meta-Analysis</span>
-                        <span class="keyword-chip">Sustainable Livestock</span>
+                        <span class="keyword-chip">Sustainable Livestock Production</span>
+                        <span class="keyword-chip">Pigs</span>
                     </div>
 
                     <div class="hero-actions">
@@ -55,27 +56,27 @@
                         </a>
                     </div>
 
-                    <div class="hero-quicklinks" role="group" aria-label="Publications and CV download">
-                        <a href="publication.html" class="hero-quicklink">
+                    <div class="hero-quicklinks" role="group" aria-label="Connect and CV download">
+                        <button type="button" class="hero-quicklink hero-quicklink--connect" data-bs-toggle="modal" data-bs-target="#connectModal" aria-haspopup="dialog" aria-label="Connect — open profile links">
                             <span class="hero-quicklink-icon" aria-hidden="true">
-                                <i class="bi bi-journal-text"></i>
+                                <i class="bi bi-share"></i>
                             </span>
                             <span class="hero-quicklink-main">
-                                <span class="hero-quicklink-title">Journal publications</span>
-                                <span class="hero-quicklink-desc">Browse papers and article list</span>
+                                <span class="hero-quicklink-title">Connect</span>
                             </span>
                             <span class="hero-quicklink-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
-                        </a>
-                        <div class="hero-quicklink hero-quicklink--cv hero-quicklink--pending" aria-disabled="true" title="추후 PDF 파일을 연결할 예정입니다">
+                        </button>
+                        <!-- 주소에는 공백을 %20으로 변경해야 함 -->
+                        <a href="download/Curriculum_Vitae_Noa%20Park%20ver%201.7_20260512.docx" class="hero-quicklink hero-quicklink--cv" download="Curriculum_Vitae_Noa Park ver 1.7_20260512.docx" aria-label="Download CV as Word document">
                             <span class="hero-quicklink-icon hero-quicklink-icon--cv" aria-hidden="true">
                                 <i class="bi bi-file-earmark-arrow-down"></i>
                             </span>
                             <span class="hero-quicklink-main">
                                 <span class="hero-quicklink-title">Download CV</span>
-                                <span class="hero-quicklink-desc">파일 연결 예정</span>
+                                <span class="hero-quicklink-desc">Word (.docx)</span>
                             </span>
-                            <span class="hero-quicklink-badge">준비중</span>
-                        </div>
+                            <span class="hero-quicklink-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -85,8 +86,7 @@
             <div class="home-explore-inner">
                 <header class="home-explore-head">
                     <p class="home-explore-kicker">Portfolio</p>
-                    <h2 id="explore-heading" class="home-explore-title">Explore this site</h2>
-                    <p class="home-explore-desc">Publications, abstracts, gallery, and bio — quick links below.</p>
+                    <h2 id="explore-heading" class="home-explore-title">Explore Noa's Arkive</h2>
                 </header>
 
                 <div class="poster-grid">
@@ -94,7 +94,7 @@
                         <div class="col-lg-3 col-md-6">
                             <a href="publication.html" class="poster-card" aria-label="Journal Publications — peer-reviewed papers">
                                 <div class="poster-image-wrap">
-                                    <img src="img/poster01.png" alt="" class="poster-image" draggable="false">
+                                    <img src="img/card1.png" alt="" class="poster-image" draggable="false">
                                 </div>
                                 <div class="poster-content">
                                     <h3 class="poster-title">Journal Publications</h3>
@@ -111,7 +111,7 @@
                         <div class="col-lg-3 col-md-6">
                             <a href="Abstract.html" class="poster-card" aria-label="Conference abstracts and posters">
                                 <div class="poster-image-wrap">
-                                    <img src="img/poster01.png" alt="" class="poster-image" draggable="false">
+                                    <img src="img/card2.png" alt="" class="poster-image" draggable="false">
                                 </div>
                                 <div class="poster-content">
                                     <h3 class="poster-title">Conference Abstracts</h3>
@@ -128,10 +128,10 @@
                         <div class="col-lg-3 col-md-6">
                             <a href="gallery.html" class="poster-card" aria-label="Research gallery — photos and highlights">
                                 <div class="poster-image-wrap">
-                                    <img src="img/poster01.png" alt="" class="poster-image" draggable="false">
+                                    <img src="img/card3.png" alt="" class="poster-image" draggable="false">
                                 </div>
                                 <div class="poster-content">
-                                    <h3 class="poster-title">Research Gallery</h3>
+                                    <h3 class="poster-title">Gallery</h3>
                                     <p class="poster-meta">Photos &amp; highlights</p>
                                 </div>
                                 <div class="poster-overlay" aria-hidden="true">
@@ -145,10 +145,10 @@
                         <div class="col-lg-3 col-md-6">
                             <a href="about.html" class="poster-card" aria-label="Full biography and background">
                                 <div class="poster-image-wrap">
-                                    <img src="img/poster01.png" alt="" class="poster-image" draggable="false">
+                                    <img src="img/card4.png" alt="" class="poster-image" draggable="false">
                                 </div>
                                 <div class="poster-content">
-                                    <h3 class="poster-title">Full Biography</h3>
+                                    <h3 class="poster-title">Biography</h3>
                                     <p class="poster-meta">Background &amp; path</p>
                                 </div>
                                 <div class="poster-overlay" aria-hidden="true">
@@ -165,13 +165,56 @@
     </main>
 
     <div id="footer-placeholder"></div>
-</body>
-</html>
 
+    <!-- Connect: external profiles -->
+    <div class="modal fade" id="connectModal" tabindex="-1" aria-labelledby="connectModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content connect-modal">
+                <div class="modal-header border-0 pb-0">
+                    <h2 class="modal-title fw-bold" id="connectModalLabel">
+                        <i class="bi bi-share me-2 text-primary"></i>Connect
+                    </h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-0 px-4 pb-4">
+                    <p class="connect-modal-lead">Click an item to open it in a new tab.</p>
+                    <div class="connect-modal-list">
+                        <a href="https://scholar.google.com/citations?user=YwQN3AwAAAAJ&amp;hl=ko" class="connect-modal-item" target="_blank" rel="noopener noreferrer">
+                            <span class="connect-modal-item-icon" aria-hidden="true"><i class="bi bi-mortarboard"></i></span>
+                            <span class="connect-modal-item-main">
+                                <span class="connect-modal-item-title">Google Scholar</span>
+                            </span>
+                            <span class="connect-modal-item-go" aria-hidden="true"><i class="bi bi-box-arrow-up-right"></i></span>
+                        </a>
+                        <a href="https://www.researchgate.net/profile/Noa-Park-2?ev=hdr_xprf" class="connect-modal-item" target="_blank" rel="noopener noreferrer">
+                            <span class="connect-modal-item-icon" aria-hidden="true"><i class="bi bi-journal-text"></i></span>
+                            <span class="connect-modal-item-main">
+                                <span class="connect-modal-item-title">Research Gate</span>
+                            </span>
+                            <span class="connect-modal-item-go" aria-hidden="true"><i class="bi bi-box-arrow-up-right"></i></span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/noa-park-84a5002b4/" class="connect-modal-item" target="_blank" rel="noopener noreferrer">
+                            <span class="connect-modal-item-icon" aria-hidden="true"><i class="bi bi-linkedin"></i></span>
+                            <span class="connect-modal-item-main">
+                                <span class="connect-modal-item-title">LinkedIn</span>
+                            </span>
+                            <span class="connect-modal-item-go" aria-hidden="true"><i class="bi bi-box-arrow-up-right"></i></span>
+                        </a>
+                        <a href="https://www.instagram.com/_noa_park/" class="connect-modal-item" target="_blank" rel="noopener noreferrer">
+                            <span class="connect-modal-item-icon" aria-hidden="true"><i class="bi bi-instagram"></i></span>
+                            <span class="connect-modal-item-main">
+                                <span class="connect-modal-item-title">Instagram</span>
+                            </span>
+                            <span class="connect-modal-item-go" aria-hidden="true"><i class="bi bi-box-arrow-up-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
-<!-- 모달창 -->
-<div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="cvModalLabel" aria-hidden="true">
+    <!-- CV 모달 -->
+    <div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="cvModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content cv-modal">
             <div class="modal-header border-0 pb-0">
@@ -231,27 +274,12 @@
                                 <li>Modeling approaches for precision feeding</li>
                             </ul>
                         </div>
-
-                        <div class="cv-section mt-4">
-                            <h5 class="cv-section-title">
-                                <i class="bi bi-graph-up me-2"></i>Publications
-                            </h5>
-                            <div class="cv-stats">
-                                <span class="stat-item">10+ Journal Articles(수정필)</span>
-                                <span class="stat-item">15 Conference Posters(수정필)</span>
-                                <span class="stat-item">5 Oral Presentations(수정필)</span>
-                            </div>
-                        </div>
-
-                        <!-- 다운로드 버튼 -->
-                        <!-- <div class="cv-download mt-4 text-center">
-                            <a href="cv/Noa_Park_CV.pdf" class="btn-download" download>
-                                <i class="bi bi-download me-2"></i>Download Full CV (PDF)
-                            </a>
-                        </div> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+</body>
+</html>

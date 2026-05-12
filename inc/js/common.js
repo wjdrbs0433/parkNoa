@@ -73,24 +73,39 @@ function loadFooter() {
     const footerHtml = `
         <footer class="footer">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 text-start">
-                        <h6><i class="bi bi-envelope-fill"></i>Contact</h6>
-                        <a href="mailto:choi.hyunjun@gmail.com" class="footer-link">
-                            <i class="bi bi-envelope"></i>parknoa0227@gmail.com
-                        </a>
+                <div class="row footer-columns g-4 justify-content-center">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-panel">
+                            <h6 class="footer-panel-title"><i class="bi bi-envelope-fill"></i>Contact</h6>
+                            <div class="footer-panel-body">
+                                <a href="mailto:noapark2@illinois.edu" class="footer-link">
+                                    <i class="bi bi-envelope"></i>noapark2@illinois.edu
+                                </a>
+                                <a href="mailto:parknoa0227@gmail.com" class="footer-link">
+                                    <i class="bi bi-envelope"></i>parknoa0227@gmail.com
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 text-start">
-                        <h6><i class="bi bi-share-fill"></i>Connect</h6>
-                        <a href="#" class="footer-link"><i class="bi bi-linkedin"></i>LinkedIn</a>
-                        <a href="#" class="footer-link"><i class="bi bi-instagram"></i>Instagram</a>
-                        <a href="#" class="footer-link"><i class="bi bi-journal-text"></i>ResearchGate</a>
-                        <a href="#" class="footer-link"><i class="bi bi-search"></i>Google Scholar</a>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-panel">
+                            <h6 class="footer-panel-title"><i class="bi bi-share-fill"></i>Connect</h6>
+                            <div class="footer-panel-body footer-connect-grid">
+                                <a href="https://scholar.google.com/citations?user=YwQN3AwAAAAJ&hl=ko" class="footer-link" target="_blank" rel="noopener noreferrer"><i class="bi bi-mortarboard"></i>Google Scholar</a>
+                                <a href="https://www.researchgate.net/profile/Noa-Park-2?ev=hdr_xprf" class="footer-link" target="_blank" rel="noopener noreferrer"><i class="bi bi-journal-text"></i>Research Gate</a>
+                                <a href="https://www.linkedin.com/in/noa-park-84a5002b4/" class="footer-link" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i>LinkedIn</a>
+                                <a href="https://www.instagram.com/_noa_park/" class="footer-link" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i>Instagram</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 text-start">
-                        <h6><i class="bi bi-info-circle-fill"></i>More</h6>
-                        <a href="#" class="footer-link"><i class="bi bi-person-badge"></i>CV Download</a>
-                        <a href="#" class="footer-link"><i class="bi bi-rss"></i>Biography</a>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-panel">
+                            <h6 class="footer-panel-title"><i class="bi bi-info-circle-fill"></i>More</h6>
+                            <div class="footer-panel-body">
+                                <a href="#" class="footer-link"><i class="bi bi-person-badge"></i>CV Download</a>
+                                <a href="#" class="footer-link"><i class="bi bi-rss"></i>Biography</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-bottom text-center">
