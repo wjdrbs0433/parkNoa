@@ -131,29 +131,40 @@
     font-weight: 500;
 }
 
-/* 저널명: 이탤릭 + 링크 (구 strong 파란색 역할) */
-.pub-journal-link {
-    font-style: italic;
+/* 논문 제목: 논문 페이지로 이동하는 링크 (파란색·굵게) */
+.pub-title-link {
     font-weight: 700;
     color: var(--pub-accent-soft);
     text-decoration: none;
-    letter-spacing: 0.01em;
     border-bottom: 1px solid transparent;
     transition:
         color 0.15s ease,
         border-color 0.15s ease;
 }
 
-.pub-journal-link:hover {
+.pub-title-link:hover {
     color: #1d4ed8;
     border-bottom-color: rgba(37, 99, 235, 0.45);
 }
 
-.pub-journal-plain {
-    font-style: italic;
+/* 초록 제목: 링크 없이 publication 제목과 동일한 강조 */
+.pub-abstract-title {
     font-weight: 700;
     color: var(--pub-accent-soft);
-    letter-spacing: 0.01em;
+}
+
+/* 저널명: 이탤릭만 (링크 없음) */
+.pub-journal-name {
+    font-style: italic;
+    font-weight: 500;
+    color: inherit;
+}
+
+/* 학회록·보충권 등 뒷줄: 이탤릭만 (Abstracts) */
+.pub-journal-plain {
+    font-style: italic;
+    font-weight: 500;
+    color: inherit;
 }
 
 /* Abstracts: venue / proceedings line on its own row */

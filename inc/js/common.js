@@ -25,7 +25,7 @@ function renderNavLink(activeKey, key, href, iconBi, label) {
     var activeClass = activeKey === key ? " active" : "";
     return (
         '<li class="nav-item">' +
-        '<a class="nav-link fw-semibold nav-span' +
+        '<a class="nav-link fw-semibold' +
         activeClass +
         '" href="' +
         href +
@@ -55,9 +55,9 @@ function loadNavbar() {
         '<nav class="navbar navbar-expand-lg navbar-light nav-stay site-navbar">' +
         '<div class="container-fluid">' +
         '<a class="navbar-brand" href="index.html">' +
-        '<img src="img/logo.png" alt="Logo" style="height: 40px; width: auto; margin-right: 10px;">' +
+        '<img src="img/logo.png" alt="Noa Park" class="site-nav-logo" width="40" height="40" decoding="async">' +
         "</a>" +
-        '<span class="nav-span fw-bold" style="font-size: 1.5rem; line-height: 40px;">Noa Park</span>' +
+        '<a href="index.html" class="site-nav-title">Noa Park</a>' +
         '<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">' +
         '<span class="navbar-toggler-icon"></span>' +
         "</button>" +
@@ -102,8 +102,8 @@ function loadFooter() {
                         <div class="footer-panel">
                             <h6 class="footer-panel-title"><i class="bi bi-info-circle-fill"></i>More</h6>
                             <div class="footer-panel-body">
-                                <a href="#" class="footer-link"><i class="bi bi-person-badge"></i>CV Download</a>
-                                <a href="#" class="footer-link"><i class="bi bi-rss"></i>Biography</a>
+                                <a href="download/Curriculum_Vitae_Noa%20Park%20ver%201.7_20260512.docx" class="footer-link" download="Curriculum_Vitae_Noa Park ver 1.7_20260512.docx" aria-label="Download CV as Word document"><i class="bi bi-person-badge"></i>CV Download</a>
+                                <a href="about.html" class="footer-link"><i class="bi bi-rss"></i>Biography</a>
                             </div>
                         </div>
                     </div>

@@ -138,6 +138,17 @@
     line-height: 1.5;
 }
 
+/* 학교 우편 주소 — 라벨 이미지와 비슷한 모노 + 대문자 */
+.contact-school-line {
+    font-family: ui-monospace, "Cascadia Mono", "Segoe UI Mono", Menlo, Consolas, monospace;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 1.55;
+    color: var(--ct-text);
+}
+
 .contact-details a {
     color: var(--ct-accent);
     text-decoration: none;
@@ -196,13 +207,31 @@
     color: #fff;
 }
 
+.contact-social-btn--ig {
+    background: linear-gradient(
+        45deg,
+        #f58529 0%,
+        #dd2a7b 35%,
+        #8134af 65%,
+        #515bd4 100%
+    );
+    color: #fff;
+    font-size: 1.2rem;
+}
+
 .contact-social-btn--rg {
+    padding: 0;
+    overflow: hidden;
     background: #fff;
-    color: #1e293b;
-    border: 1px solid rgba(15, 23, 42, 0.12);
-    font-size: 0.62rem;
-    font-weight: 900;
-    letter-spacing: 0.04em;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.contact-social-rg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: 10px;
 }
 
 .contact-social-btn--scholar {
