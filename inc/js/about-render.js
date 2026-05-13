@@ -28,9 +28,9 @@
     
     function renderEducation(container, data) {
         if (!container || !data) return;
-        var html = '<div class="cv-education-layout">';
+        var html = '<div class="cv-education-layout cv-education-layout--rows">';
         data.items.forEach(function (row) {
-            html += '<div class="cv-item-grid cv-item-grid--education-cell">';
+            html += '<div class="cv-item-grid-wide cv-edu-row">';
             html += '<div class="cv-edu-date-col">';
             html += '<span class="cv-date">' + esc(row.period) + "</span>";
             if (row.logoSrc) {
@@ -39,7 +39,7 @@
                     esc(row.logoSrc) +
                     '" alt="' +
                     esc(row.logoAlt || "") +
-                    '" class="cv-univ-logo cv-univ-logo--under-date" loading="lazy">';
+                    '" class="cv-univ-logo cv-univ-logo--edu-row" loading="lazy">';
             }
             html += "</div>";
             html += "<div>";

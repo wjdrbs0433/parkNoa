@@ -61,7 +61,7 @@ window.ABOUT_CONTENT = {
             title: "Education",
             items: [
                 {
-                    period: "Sep 2026-Present",
+                    period: "Aug 2026-Present",
                     degree: "Ph.D. in Animal Science",
                     schoolLine: "University of Illinois Urbana-Champaign, IL, USA",
                     logoSrc: "img/llinoisLogo.png",
