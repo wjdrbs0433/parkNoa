@@ -167,12 +167,6 @@
     color: inherit;
 }
 
-/* Abstracts: venue / proceedings line on its own row */
-.pub-item-text cite.pub-journal-plain {
-    display: block;
-    margin-top: 0.4rem;
-}
-
 @media (max-width: 575.98px) {
     .pub-item {
         flex-direction: column;
