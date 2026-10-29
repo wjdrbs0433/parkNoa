@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="abstract-loading">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Noa Park — Abstracts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        html.abstract-loading body.page-pub > :not(#abstract-loading-screen) { opacity: 0; visibility: hidden; pointer-events: none; }
+        html:not(.abstract-loading) body.page-pub > :not(#abstract-loading-screen) { transition: opacity .2s ease; }
+        #abstract-loading-screen { position: fixed; inset: 0; z-index: 9999; display: grid; place-content: center; gap: 1rem; text-align: center; background: #f4f6fb; color: #1e3a5f; font: 600 1rem -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+        #abstract-loading-screen::before { content: ""; width: 2rem; height: 2rem; margin: 0 auto; border: 3px solid #dbe5f5; border-top-color: #2563eb; border-radius: 50%; animation: abstract-spin .8s linear infinite; }
+        html:not(.abstract-loading) #abstract-loading-screen { display: none; }
+        @keyframes abstract-spin { to { transform: rotate(360deg); } }
+        @media (prefers-reduced-motion: reduce) { #abstract-loading-screen::before { animation: none; } }
+    </style>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,101 +27,37 @@
 </head>
 
 <body class="page-pub">
+    <div id="abstract-loading-screen" role="status" aria-live="polite">Loading page...</div>
     <div id="navbar-placeholder"></div>
 
     <main class="pub-page">
         <header class="pub-page-header">
             <p class="pub-page-kicker">Research output</p>
             <h1 class="pub-page-title"><span>Conference abstracts</span></h1>
-            <p class="pub-page-desc">8 presentations — newest first</p>
+            <p class="pub-page-desc" id="abstract-count"></p>
         </header>
 
-        <ul class="pub-list">
-            <li class="pub-item">
-                <span class="pub-item-num" aria-hidden="true">8</span>
-                <div class="pub-item-body">
-                    <p class="pub-item-text">
-                        An, Y., N. Park, and B. G. Kim. 2025.
-                        <span class="pub-abstract-title">Prediction equations for estimating energy utilization in feed ingredients and diets for nursery and growing pigs based on conventional or multi-sample simultaneous in vitro procedure</span>.
-                        <cite class="pub-journal-plain">Proceedings of 2025 Annual Congress of KSAST. June 25-27. Korean Society of Animal Science and Technology. Korea. Page 142.</cite>
-                    </p>
-                </div>
-            </li>
-            <li class="pub-item">
-                <span class="pub-item-num" aria-hidden="true">7</span>
-                <div class="pub-item-body">
-                    <p class="pub-item-text">
-                        Park, N. and B. G. Kim. 2024.
-                        <span class="pub-abstract-title">Standardized ileal digestibility of valine in granulated valine biomass is not different from that in crystalline L-valine in growing pigs</span>.
-                        <cite class="pub-journal-plain">Proceedings of the joint 20th AAAP and 35th AAAS Animal Production Congress. July 8-12, South Wharf Melbourne, Victoria, Australia.</cite>
-                    </p>
-                </div>
-            </li>
-            <li class="pub-item">
-                <span class="pub-item-num" aria-hidden="true">6</span>
-                <div class="pub-item-body">
-                    <p class="pub-item-text">
-                        Park, N. and B. G. Kim. 2024.
-                        <span class="pub-abstract-title">Energy concentration in feed ingredients depends on chemical composition and growth stage of pigs</span>.
-                        <cite class="pub-journal-plain">Proceedings of the joint 20th AAAP and 35th AAAS Animal Production Congress. July 8-12, South Wharf Melbourne, Victoria, Australia.</cite>
-                    </p>
-                </div>
-            </li>
-            <li class="pub-item">
-                <span class="pub-item-num" aria-hidden="true">5</span>
-                <div class="pub-item-body">
-                    <p class="pub-item-text">
-                        Park, N., H. Kim, and B. G. Kim. 2024.
-                        <span class="pub-abstract-title">Basal endogenous losses of crude protein and amino acids in pigs can be predicted based on body weight</span>.
-                        <cite class="pub-journal-plain">Proceedings of 2024 Annual Congress of KSAST. June 26-28. Korean Society of Animal Science and Technology. Korea. Page 34.</cite>
-                    </p>
-                </div>
-            </li>
-            <li class="pub-item">
-                <span class="pub-item-num" aria-hidden="true">4</span>
-                <div class="pub-item-body">
-                    <p class="pub-item-text">
-                        Do, H., B. Hong, J. Son, N. Park, and B. G. Kim. 2024.
-                        <span class="pub-abstract-title">A prediction model for estimating gross energy concentrations of pig urine using nitrogen concentration</span>.
-                        <cite class="pub-journal-plain">Proceedings of 2024 Annual Congress of KSAST. June 26-28. Korean Society of Animal Science and Technology. Korea. Page 114.</cite>
-                    </p>
-                </div>
-            </li>
-            <li class="pub-item">
-                <span class="pub-item-num" aria-hidden="true">3</span>
-                <div class="pub-item-body">
-                    <p class="pub-item-text">
-                        Park, N., J. Son, and B. G. Kim. 2023.
-                        <span class="pub-abstract-title">An in vitro digestion procedure using DaisyII incubator can replace conventional in vitro digestion procedures using flasks for estimating ileal digestibility of feed ingredients for pigs</span>.
-                        <cite class="pub-journal-plain">Journal of Animal Science (E-Suppl. 2):308-309.</cite>
-                    </p>
-                </div>
-            </li>
-            <li class="pub-item">
-                <span class="pub-item-num" aria-hidden="true">2</span>
-                <div class="pub-item-body">
-                    <p class="pub-item-text">
-                        Park, N., J. Son, and B. G. Kim. 2023.
-                        <span class="pub-abstract-title">Prediction models for estimating metabolizable energy intake of pigs based on body weight and ambient temperature</span>.
-                        <cite class="pub-journal-plain">Journal of Animal Science (E-Suppl. 2):360.</cite>
-                    </p>
-                </div>
-            </li>
-            <li class="pub-item">
-                <span class="pub-item-num" aria-hidden="true">1</span>
-                <div class="pub-item-body">
-                    <p class="pub-item-text">
-                        Park, N., J. Son, and B. G. Kim. 2022.
-                        <span class="pub-abstract-title">A prediction equation for energy digestibility in feeds using a multi-sample simultaneous digestion method for pigs</span>.
-                        <cite class="pub-journal-plain">Animal Bioscience 35 (Suppl. 1):213.</cite>
-                    </p>
-                </div>
-            </li>
-        </ul>
+        <ul class="pub-list" id="abstract-list"></ul>
     </main>
 
     <div id="footer-placeholder"></div>
 
+    <script src="inc/content/abstract-content.js"></script>
+    <script src="inc/js/abstract-render.js"></script>
     <script src="inc/js/common.js"></script>
+    <script>
+        function showAbstractWhenReady() {
+            var loadingScreen = document.getElementById('abstract-loading-screen');
+            if (!window.ABSTRACT_CONTENT) {
+                loadingScreen.textContent = 'Unable to load content. Please refresh the page.';
+                return;
+            }
+            Promise.resolve(document.fonts ? document.fonts.ready : null).then(function () {
+                document.documentElement.classList.remove('abstract-loading');
+            });
+        }
+        if (document.readyState === 'complete') showAbstractWhenReady();
+        else window.addEventListener('load', showAbstractWhenReady);
+    </script>
 </body>
 </html>

@@ -39,7 +39,7 @@
                     esc(row.logoSrc) +
                     '" alt="' +
                     esc(row.logoAlt || "") +
-                    '" class="cv-univ-logo cv-univ-logo--edu-row" loading="lazy">';
+                    '" class="cv-univ-logo cv-univ-logo--edu-row" loading="eager">';
             }
             html += "</div>";
             html += "<div>";

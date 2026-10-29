@@ -1,0 +1,171 @@
+.gallery-page {
+    margin-top: 48px;
+}
+
+.gallery-section-kicker {
+    margin: 0 0 .45rem;
+    color: #2563eb;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.gallery-years {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: .9rem 1.1rem;
+    margin-bottom: 1.75rem;
+    background: #fff;
+    border: 1px solid rgba(30, 58, 95, .09);
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(30, 58, 95, .05);
+}
+
+.gallery-years-label {
+    flex: none;
+    color: #64748b;
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.gallery-year-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .55rem;
+}
+
+.gallery-year-button {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    padding: .55rem .85rem;
+    border: 1px solid #dbe4f0;
+    border-radius: 999px;
+    background: #f7f9fd;
+    color: #1e3a5f;
+    font-size: .88rem;
+    font-weight: 700;
+    line-height: 1;
+    transition: background .2s ease, color .2s ease, border-color .2s ease;
+}
+
+.gallery-year-button small {
+    min-width: 1.25rem;
+    padding: .2rem .35rem;
+    border-radius: 999px;
+    background: #e8eef8;
+    color: #526884;
+    font-size: .68rem;
+}
+
+.gallery-year-button:hover,
+.gallery-year-button[aria-pressed="true"] {
+    background: #2563eb;
+    border-color: #2563eb;
+    color: #fff;
+}
+
+.gallery-year-button:hover small,
+.gallery-year-button[aria-pressed="true"] small {
+    background: rgba(255, 255, 255, .2);
+    color: #fff;
+}
+
+.gallery-featured {
+    max-width: 1000px;
+    margin: 0 auto 2.5rem;
+}
+
+.gallery-featured[hidden],
+.gallery-featured [hidden] {
+    display: none !important;
+}
+
+.gallery-page .carousel-indicators .active {
+    background: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, .2);
+}
+
+.gallery-page .simple-carousel-btn:hover {
+    color: #2563eb !important;
+}
+
+.gallery-section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 0 0 1.4rem;
+}
+
+.gallery-grid-heading,
+.gallery-grid-lead {
+    margin: 0;
+    text-align: left;
+}
+
+.gallery-grid-heading {
+    color: #1e3a5f;
+    font-size: 1.7rem;
+}
+
+.gallery-grid-lead {
+    font-size: .85rem;
+    white-space: nowrap;
+}
+
+.gallery-item {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    text-align: left;
+}
+
+.gallery-img-wrap {
+    display: block;
+}
+
+.gallery-item:focus-visible,
+.gallery-year-button:focus-visible {
+    outline: 3px solid #2563eb;
+    outline-offset: 3px;
+}
+
+.gallery-item:focus-visible .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-empty {
+    padding: 2rem;
+    border-radius: 16px;
+    background: #fff;
+    color: #64748b;
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+    .gallery-years {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: .7rem;
+    }
+
+    .gallery-year-button {
+        padding: .55rem .75rem;
+    }
+
+    .gallery-section-heading {
+        align-items: baseline;
+    }
+
+    #imageModal .modal-body-custom {
+        min-height: 220px;
+        padding: 12px;
+    }
+}

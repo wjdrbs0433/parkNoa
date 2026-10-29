@@ -131,7 +131,7 @@
     font-weight: 500;
 }
 
-/* 논문 제목: 논문 페이지로 이동하는 링크 (파란색·굵게) */
+/* 논문 제목: 링크 유무에 관계없이 파란색·굵게 표시 */
 .pub-title-link {
     font-weight: 700;
     color: var(--pub-accent-soft);
@@ -142,7 +142,7 @@
         border-color 0.15s ease;
 }
 
-.pub-title-link:hover {
+a.pub-title-link:hover {
     color: #1d4ed8;
     border-bottom-color: rgba(37, 99, 235, 0.45);
 }
